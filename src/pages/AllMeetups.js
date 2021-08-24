@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 
 function AllMeetupsPage() {
