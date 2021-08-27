@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import {useContext} from "react";
 
 import FavoritesContext from "../store/favorites-context";
 import MeetupList from "../components/meetups/MeetupList";
@@ -11,11 +11,13 @@ function FavoritesPage() {
 
     if (favoritesContext.totalFavorites === 0) {
         content = <p>There are no favorites Yet</p>
+    } else {
+        content = <MeetupList meetups={favoriteMeetups}></MeetupList>;
     }
 
     return <section>
         <h1>Favorite Meetups</h1>
-        <MeetupList meetups={favoriteMeetups}></MeetupList>
+        {content}
     </section>
 }
 
